@@ -121,7 +121,7 @@ section h2 {
   display:inline-block;
   align-items: center;
   margin-right: 0.75rem;
-  width: 3.5em;
+  width: 3.6em;
   height: 3.0em;
   fill: var(--highlight-color);
   animation:flutuar 2s ease-in-out infinite;
