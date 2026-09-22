@@ -1,0 +1,228 @@
+:root {
+  --bg-color: #07111d;
+  --bg-panel: rgba(17, 24, 39, 0.88);
+  --bg-panel-strong: rgba(15, 23, 42, 0.96);
+  --text-color: #e2e8f0;
+  --muted-color: #cbd5e1;
+  --accent-color: #7dd3fc;
+  --accent-strong: #38bdf8;
+  --highlight-color: #a78bfa;
+  --border-color: rgba(125, 211, 252, 0.28);
+  --shadow-color: rgba(15, 23, 42, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--bg-color), #0f172a 35%, #111827 100%);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+header {
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 12px 30px var(--shadow-color);
+  padding: 2rem 1rem 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+header p {
+  margin: 0.7rem auto 1.5rem;
+  text-align: center;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  color: var(--muted-color);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-flex;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 0.96rem;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(125, 211, 252, 0.18);
+  color: var(--accent-color);
+  border-color: rgba(125, 211, 252, 0.42);
+  transform: translateY(-2px);
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.25rem 2rem;
+}
+
+section {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 12px 32px var(--shadow-color);
+}
+
+section h2 {
+  display: inline-block;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.icone-secao {
+  display:inline-block;
+  align-items: center;
+  margin-right: 0.75rem;
+  width: 3.6em;
+  height: 3.0em;
+  fill: var(--highlight-color);
+  animation:flutuar 2s ease-in-out infinite;
+}
+/*
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+*/
+p,
+li,
+a,
+strong {
+  font-size: 1rem;
+}
+
+section p,
+article p,
+section li {
+  display: block;
+  margin: 0 0 1rem;
+  color: var(--muted-color);
+  font-weight: 400;
+}
+
+section > p,
+article > p {
+  margin-bottom: 1rem;
+}
+
+section ul {
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+}
+
+section ul li {
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+p a:hover,
+li a:hover {
+  color: var(--highlight-color);
+  opacity: 0.9;
+}
+
+strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+article {
+  background: rgba(15, 23, 42, 0.64);
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+article h3 {
+  margin: 0 0 0.9rem;
+  color: #f8fafc;
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  color: var(--muted-color);
+  border-top: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: min(100%, 260px);
+    text-align: center;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+}
