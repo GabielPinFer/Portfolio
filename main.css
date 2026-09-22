@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  background: rgba(15, 23, 42, 0.9);
+  background: var(--bg-panel);
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 12px 30px var(--shadow-color);
   padding: 2rem 1rem 1.5rem;
@@ -68,7 +68,7 @@ nav ul {
 }
 
 nav li {
-  display: inline-flex;
+  display: inline-block;
 }
 
 nav a {
@@ -108,7 +108,7 @@ section {
 }
 
 section h2 {
-  display: inline-block;
+  display: -webkit-inline-flex;
   align-items: center;
   gap: 0.75rem;
   margin: 0 0 1.15rem;
@@ -121,11 +121,17 @@ section h2 {
   display:inline-block;
   align-items: center;
   margin-right: 0.75rem;
-  width: 3.6em;
-  height: 3.0em;
+  width: 2.0em;
+  height: 2.0em;
+  /*
+  border-color: var(--accent-color);
+  border-width: 0.15em;
+  border-style: solid;
+  */
   fill: var(--highlight-color);
   animation:flutuar 2s ease-in-out infinite;
 }
+
 /*
 @keyframes flutuar {
   0%,
